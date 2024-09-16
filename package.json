@@ -1,11 +1,11 @@
 {
-  "name": "html-to-rtf",
-  "version": "2.1.0",
+  "name": "@jerseygooner/html-to-rtf",
+  "version": "1.0.4",
   "author": {
-    "name": "Ozires R.S.O.F",
-    "email": "oziresrds@yahoo.com.br"
+    "name": "Nijay Patel",
+    "email": "nijay.patel@gmail.com"
   },
-  "description": "Convert html to rtf format in the browser and the server",
+  "description": "Fork of 'html-to-rtf'",
   "readmeFilename": "README.md",
   "keywords": [
     "html",
@@ -20,24 +20,21 @@
   "main": "index.js",
   "dependencies": {
     "cheerio": "1.0.0-rc.12",
-    "juice": "4.1.0"
+    "juice": "^7.0.0"
   },
   "devDependencies": {
     "browserify": "17.0.0",
-    "gulp": "4.0.2",
-    "gulp-mocha": "8.0.0",
     "mocha": "10.2.0",
     "should": "11.2.1"
   },
   "scripts": {
-    "test": "gulp tests",
+    "test": "mocha app/src/**/*.test.js",
     "browser:build": "browserify ./main.js > ./app/browser/bundle.js",
     "browserify": "browserify",
-    "publish": "npm run browser:build && npm publish",
     "test:publish-package": "npm pack"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/oziresrds/html-to-rtf.git"
+    "url": "git://github.com/jerseygooner/html-to-rtf.git"
   }
 }
